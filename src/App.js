@@ -115,8 +115,8 @@ function App() {
         <div>
           <button onClick={generate} className="button">Generate</button>
           <br />
-          <button onClick={addSuccess} className="button" style={{ color: "green" }}>Success</button>
-          <button onClick={addFailure} className="button" style={{ color: "red" }}>Failure</button>
+          <button onClick={addSuccess} className="score-button" style={{ color: "green" }}>Success</button>
+          <button onClick={addFailure} className="score-button" style={{ color: "red" }}>Failure</button>
           <br />
           <button onClick={clear} className="button">Clear</button>
         </div>
@@ -130,8 +130,8 @@ function App() {
             )
           })}
 
-          <button onClick={showAll} hidden={results.length === resultsToShow.length}>Show {results.length - resultsToShow.length} more results</button>
-          <button onClick={hideAll} hidden={results.length !== resultsToShow.length}>Hide results</button>
+          <button className="button" onClick={showAll} hidden={results.length === resultsToShow.length}>Show {results.length - resultsToShow.length} more results</button>
+          <button className="button" onClick={hideAll} hidden={results.length !== resultsToShow.length}>Hide results</button>
         </div>
       </div>
     </div>
